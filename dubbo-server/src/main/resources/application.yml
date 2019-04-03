@@ -1,0 +1,14 @@
+#spring
+spring:
+  application:
+    name: server
+  profiles:
+    active: local       # 开发环境
+#    active: test      # 开发测试环境
+#    active: buddha      # 开发测试环境
+#    active: pre       # 预发环境
+#    active: prod    # 生产环境
+#  log:
+#    file:
+#      path: ${HOME}/app/logs/${spring.application.name}/${spring.profiles.active}
+#      maxKeep: 5

@@ -1,0 +1,80 @@
+#app
+server:
+    port: 8083
+    
+management:
+  port: 9093
+  security:
+    enabled: false
+  # Dubbo Health
+  health:
+    dubbo:
+      status:
+        ## StatusChecker Name defaults (default : "memory", "load" )
+        defaults: memory
+        ## StatusChecker Name extras (default : empty )
+        extras: load,threadpool
+
+# Dubbo Endpoint (default status is disable)
+endpoints:
+  dubbo:
+    enabled: true
+
+dubbo:
+  application:
+    qos:
+      enable: true
+      port: 33334
+    name: windy-service
+    owner: windy
+    organization: windy
+  registry:
+    address: zookeeper://127.0.0.1:2181
+
+  protocol:
+    name: dubbo
+    port: 22285
+    host: 127.0.0.1
+    payload: 524288000
+    
+  provider:
+    version: 1.0_qi_p
+    timeout: 20000
+    
+  consumer:
+    version: 1.0_qi_c
+    timeout: 20000
+    client:
+      version: 1.0_qi_p
+      timeout: 15000
+
+
+      
+  # REDIS (RedisProperties)
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6399
+    # Redis服务器连接密码（默认为空）
+    password: zhimaguanmen
+    pool: 
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 50
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: 10000
+      # 连接池中的最大空闲连接
+      max-idle: 10
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 5000
+
+
+    
+
+
+
+
