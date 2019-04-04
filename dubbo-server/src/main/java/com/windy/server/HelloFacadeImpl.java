@@ -9,15 +9,16 @@
  */ 
 package com.windy.server;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.windy.api.HelloFacade;
-import org.springframework.stereotype.Service;
 
 /**
  * @Author: windy
  * @Version 1.0
  * @mail nightwindy163@gmail.com
  */
-@Service("helloFacadeImpl")
+@Service(filter = "ProviderInvokeStaticsFilter")
+@org.springframework.stereotype.Service("helloFacadeImpl")
 public class HelloFacadeImpl implements HelloFacade {
 	/**
 	 * <p> 测试Hello World </p>
