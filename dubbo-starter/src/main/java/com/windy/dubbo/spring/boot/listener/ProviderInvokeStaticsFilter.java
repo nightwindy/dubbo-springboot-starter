@@ -12,7 +12,7 @@ import com.alibaba.dubbo.rpc.RpcException;
  * @Version 1.0
  * @mail nightwindy163@gmail.com
  */
-@Activate(group = Constants.PROVIDER)
+@Activate(group = Constants.PROVIDER, order = -110000)
 public class ProviderInvokeStaticsFilter extends StaticsFilter {
 
     @SuppressWarnings("Duplicates")

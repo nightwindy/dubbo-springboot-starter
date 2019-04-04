@@ -1,2 +1,3 @@
-dubboconsumerstatics=ConsumerInvokeStaticsFilter
-dubboproviderstatics=ProviderInvokeStaticsFilter
+dubboconsumerstatics=com.windy.dubbo.spring.boot.listener.ConsumerInvokeStaticsFilter
+dubboproviderstatics=com.windy.dubbo.spring.boot.listener.ProviderInvokeStaticsFilter
+hystrix=com.windy.dubbo.spring.boot.hystrix.HystrixFilter

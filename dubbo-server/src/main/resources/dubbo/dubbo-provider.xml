@@ -17,5 +17,7 @@
        ">
 
 	<dubbo:service interface="com.windy.api.HelloFacade"
-				   ref="helloFacadeImpl" version="${dubbo.provider.version}" owner="ciwei" />
+				   ref="helloFacadeImpl" version="${dubbo.provider.version}"
+				   owner="ciwei"
+	/>
 </beans>

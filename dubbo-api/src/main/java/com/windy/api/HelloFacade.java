@@ -23,4 +23,8 @@ public interface HelloFacade {
 	 * @return APIResult<String>
 	 */
 	String hello(String world);
+
+	String echoWithTimeOut();
+
+	String echoWithException();
 }

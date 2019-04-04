@@ -22,4 +22,19 @@ public class HelloClientController {
 
         return helloFacade.hello(parm);
     }
+
+
+    @RequestMapping("/timeout")
+    @ResponseBody
+    public String echoWithTimeOut() {
+
+        return helloFacade.echoWithTimeOut();
+    }
+
+    @RequestMapping("/exception")
+    @ResponseBody
+    public String echoWithException() {
+
+        return helloFacade.echoWithException();
+    }
 }

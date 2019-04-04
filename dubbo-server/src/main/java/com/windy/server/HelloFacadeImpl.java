@@ -12,12 +12,13 @@ package com.windy.server;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.windy.api.HelloFacade;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: windy
  * @Version 1.0
  * @mail nightwindy163@gmail.com
  */
-@Service(filter = "ProviderInvokeStaticsFilter")
 @org.springframework.stereotype.Service("helloFacadeImpl")
 public class HelloFacadeImpl implements HelloFacade {
 	/**
@@ -27,7 +28,23 @@ public class HelloFacadeImpl implements HelloFacade {
 	 * @return APIResult<String>
 	 */
 	@Override
-	public String hello(String world){
+	public String hello(String world)  {
 		return "we r in the same"+world;
+	}
+
+
+	@Override
+	public String echoWithTimeOut() {
+		try {
+			TimeUnit.SECONDS.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "Hello World";
+	}
+
+	@Override
+	public String echoWithException() {
+		return String.format("%s", 10 / 0);
 	}
 }
