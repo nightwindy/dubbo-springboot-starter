@@ -1,6 +1,5 @@
 package com.windy.client;
 
-import com.windy.api.HelloFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

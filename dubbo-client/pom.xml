@@ -26,20 +26,6 @@
             <groupId>com.windy</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>1.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-aop</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-expression</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-web</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.curator</groupId>
