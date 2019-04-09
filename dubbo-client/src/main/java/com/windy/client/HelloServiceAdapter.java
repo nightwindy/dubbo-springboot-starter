@@ -9,8 +9,6 @@
  */
 package com.windy.client;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.dubbo.config.annotation.Service;
 import com.windy.api.HelloFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,6 +30,7 @@ public class HelloServiceAdapter {
 
        return helloFacade.echoWithTimeOut();
     }
+
 
     public String echoWithException() {
 
