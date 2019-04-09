@@ -7,7 +7,7 @@ import com.alibaba.dubbo.rpc.*;
 import com.netflix.hystrix.HystrixCommand;
 import com.windy.dubbo.spring.boot.hystrix.config.SetterFactory;
 
-@Activate(group = Constants.CONSUMER, before = "future",order = -110000)
+@Activate(group = Constants.CONSUMER,order = -110000)
 public class HystrixFilter implements Filter {
 
     @Override
